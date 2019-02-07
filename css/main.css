@@ -126,6 +126,7 @@ img {
     margin: 10px 2%;
     float:left;
     font-size:12px;
+    cursor:move;
 }
 .dissertation h3 {
     font-size:14px;
@@ -150,6 +151,7 @@ img {
 #drop .dissertation {
     margin: 10px auto;
     float:none;
+    position:static !important;
 }
 
 #darkness {
@@ -187,17 +189,39 @@ img {
     border:1px solid #333;
     padding:5px;
     width:90%;
+    cursor:move;
 }
 #selected-brinkeys {
     width:47%;
     float:left;
+}
+#selected-brinkeys-drop {
     border: 4px dashed #009300;
     padding:10px 1%;
     background:#eee;
     min-height:200px;
 }
-
-
+#selected-brinkeys .suggested-brinkey{
+    position:static !important;
+}
+#brinkey-placeholder {
+    text-align:center;
+    margin-top:87px;
+}
+#check-result {
+    float:right;
+    background:#009300;
+    border:0;
+    color:white;
+    margin-top:20px;
+    padding: 5px 10px;
+    border-radius:2px;
+    transition:  0.2s ease;
+    cursor:pointer;
+}
+#check-result:hover {
+    background:#007500;
+}
 
 
 /* ==========================================================================
