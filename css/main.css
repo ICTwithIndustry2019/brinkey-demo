@@ -186,7 +186,7 @@ img {
 }
 .suggested-brinkey {
     background:#eee;
-    border:1px solid #333;
+    border:2px solid #333;
     padding:5px;
     width:90%;
     cursor:move;
@@ -197,12 +197,19 @@ img {
 }
 #selected-brinkeys-drop {
     border: 4px dashed #009300;
-    padding:10px 1%;
+    padding:10px;
     background:#eee;
     min-height:200px;
 }
 #selected-brinkeys .suggested-brinkey{
     position:static !important;
+    transition:  0.2s ease;
+}
+.suggested-brinkey.correct {
+    border-color:#007500;
+}
+#selected-brinkeys .incorrect {
+    border-color:red;
 }
 #brinkey-placeholder {
     text-align:center;
@@ -222,6 +229,8 @@ img {
 #check-result:hover {
     background:#007500;
 }
+
+
 
 
 /* ==========================================================================
