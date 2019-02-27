@@ -238,7 +238,9 @@ img {
 #check-result:hover {
     background:#007500;
 }
-
+#missing-gold-brinkeys {
+    display:none;
+}
 
 
 

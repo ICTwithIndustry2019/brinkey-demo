@@ -51,7 +51,7 @@ function makeBrinkeysDroppable(){
 
 // display results after button click
 $('#check-result').click(function(){
-    goldBrinkeysCopy = goldBrinkeys;
+    goldBrinkeysCopy = goldBrinkeys.slice(0);
     correctBrinkeys = 0;
     $('.suggested-brinkey').each(function(){
         if(goldBrinkeys.includes($(this).data('brinkey'))){
@@ -59,7 +59,8 @@ $('#check-result').click(function(){
             if($(this).parent().attr('id')=='selected-brinkeys-drop'){ // only count correctly identified brinkeys
                 correctBrinkeys++;
             }
-            // 2DO remove brinkey from goldbrinkeyscopy, then check if any left
+            // remove brinkey from goldbrinkeyscopy, then check if any left later
+            goldBrinkeysCopy.splice( $.inArray($(this).data('brinkey'), goldBrinkeysCopy), 1);
         }
         else if($(this).parent().attr('id')=='selected-brinkeys-drop') { // only show wrong answers in selected field
             $(this).addClass('incorrect').children('span').removeClass('ui-icon-arrow-4').addClass('ui-icon-close');
@@ -77,10 +78,25 @@ $('#check-result').click(function(){
         message = "Alles goed, geweldig!";
     }
     message += "<Br/><br/>De juiste keywords zijn hieronder groen gekleurd.";
+    
+    
+    // deal with gold brinkeys that weren't suggested
+    missingBrinkeyFound = false;
+    goldBrinkeysCopy.forEach(function(entry) {
+        $('#gold-brinkeys').append('<p class="suggested-brinkey correct" data-brinkey="'+entry+'">'+entry+' <span class="ui-icon ui-icon-check"></span></p>');
+        missingBrinkeyFound = true;
+    });
+    
+    
+    if(missingBrinkeyFound){
+        message += "<Br/><br/>Er zijn ook nog keywords die niet in de gesuggereerde lijst zitten, maar wel door de KB zijn toegekend, die staan rechts onder.";
+        $('#missing-gold-brinkeys').fadeIn();
+    }
+    
     $("#dialog p").html(message);
     $( "#dialog" ).dialog();
-    console.log($('.back-btn.hidden'));
     $('.back-btn.hidden').fadeIn();
+    
 });
 
 // back button
