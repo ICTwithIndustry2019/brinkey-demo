@@ -191,6 +191,12 @@ img {
     width:90%;
     cursor:move;
 }
+#suggested-brinkey-container .suggested-brinkey {
+    width:46%;
+    padding:5px 1%;
+    margin:0 1% 5px 0;
+    float:left;
+}
 #selected-brinkeys {
     width:47%;
     float:left;
@@ -207,15 +213,17 @@ img {
 }
 .suggested-brinkey.correct {
     border-color:#007500;
+    background: #96f796;
 }
 #selected-brinkeys .incorrect {
-    border-color:red;
+    border-color:#ff0000;
+    background:#ffafaf;
 }
 #brinkey-placeholder {
     text-align:center;
     margin-top:87px;
 }
-#check-result {
+#check-result, .back-btn {
     float:right;
     background:#009300;
     border:0;
@@ -225,6 +233,7 @@ img {
     border-radius:2px;
     transition:  0.2s ease;
     cursor:pointer;
+    margin-left:10px;
 }
 #check-result:hover {
     background:#007500;
@@ -242,7 +251,7 @@ img {
  */
 
 .hidden {
-    display: none !important;
+    display: none;
 }
 
 /*

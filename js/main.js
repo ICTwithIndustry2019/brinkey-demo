@@ -16,11 +16,16 @@ $("#drop").droppable({ accept: ".dissertation",
             $('#suggested-brinkey-container').append('<p class="suggested-brinkey" data-brinkey="'+suggestedBrinkeys[key]+'">'+suggestedBrinkeys[key]+' <span class="ui-icon ui-icon-arrow-4"></span></p>');
         }
         makeBrinkeysDroppable()
+        
+        // place title and abstract
+        $('span#title').html(dropped.find('h3').html());
+        $('span#abstract').html(dropped.find('.abstract').html());
          
         $('#darkness').fadeIn();
         $('#loading').fadeIn();
         setTimeout(function(){ 
             $('#home').fadeOut(500, function(){
+                window.scrollTo(0, 0);
                 $('#darkness').fadeOut();
                 $('#loading').fadeOut();
                 $('#select-brinkeys').fadeIn();
@@ -46,6 +51,7 @@ function makeBrinkeysDroppable(){
 
 // display results after button click
 $('#check-result').click(function(){
+    goldBrinkeysCopy = goldBrinkeys;
     correctBrinkeys = 0;
     $('.suggested-brinkey').each(function(){
         if(goldBrinkeys.includes($(this).data('brinkey'))){
@@ -53,6 +59,7 @@ $('#check-result').click(function(){
             if($(this).parent().attr('id')=='selected-brinkeys-drop'){ // only count correctly identified brinkeys
                 correctBrinkeys++;
             }
+            // 2DO remove brinkey from goldbrinkeyscopy, then check if any left
         }
         else if($(this).parent().attr('id')=='selected-brinkeys-drop') { // only show wrong answers in selected field
             $(this).addClass('incorrect').children('span').removeClass('ui-icon-arrow-4').addClass('ui-icon-close');
@@ -69,5 +76,18 @@ $('#check-result').click(function(){
     else if(correctRatio == 1){
         message = "Alles goed, geweldig!";
     }
-    alert(message);
+    message += "<Br/><br/>De juiste keywords zijn hieronder groen gekleurd.";
+    $("#dialog p").html(message);
+    $( "#dialog" ).dialog();
+    console.log($('.back-btn.hidden'));
+    $('.back-btn.hidden').fadeIn();
 });
+
+// back button
+$('.back-btn').click(function(){
+    $('#select-brinkeys').fadeOut(500, function(){
+        location.reload();
+    });
+});
+
+
