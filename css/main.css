@@ -321,6 +321,9 @@ a {
 #cover-image img {
     border:4px solid #ffffff;
 }
+.ui-tooltip {
+    white-space: pre-line;
+}
 
 /* ==========================================================================
    Helper classes
