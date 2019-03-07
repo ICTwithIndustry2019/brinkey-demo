@@ -98,7 +98,10 @@ textarea {
    ========================================================================== */
 
 body {
-    background:#eee;
+    background-image:url('../img/main-bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
     font-family:'Helvetica', 'Open Sans', sans-serif;
 }
 img {
@@ -117,37 +120,52 @@ a {
 .wrapper {
     max-width:1024px;
     width:90%;
-    margin:10px auto;
+    margin:0px auto;
     padding:20px 2%;
     background:#fff;
 }
 
-
+.logo {
+    width:100%;
+    margin:-45px 0 -20px 0;
+}
 .dissertation {
-    width:17%;
+    width:12%;
     padding:10px 2%;
     margin: 10px 2%;
     float:left;
-    font-size:12px;
     cursor:move;
+    text-align:center;
 }
 .dissertation h3 {
     font-size:14px;
+    display:none;
 }
 .dissertation h4 {
     font-size:12px;
+    display:none;
+}
+.dissertation a {
+    color:inherit;
+}
+.dissertation img {
+    border:4px solid #ffffff;
 }
 .abstract {
     display:none;
 }
 
 #drop {
-    border: 4px dashed #009300;
-    padding:30px;
+    border: 2px dashed #d7ebd3;
+    padding: 180px 30px 10px;
     text-align:center;
-    background:#eee;
     transition:  0.2s ease;
+    width:150px;
+    margin:0 auto;
 }
+#drop h4 {
+    font-weight:normal;
+}   
 .ui-droppable-hover {
     opacity:0.3;
 }
@@ -183,9 +201,11 @@ a {
     display:none;
 }
 #suggested-brinkeys {
-    width:48%;
-    margin-right:2%;
+    width:44%;
+    margin-right:5%;
     float:left;
+    background:#D7EBD3;
+    padding:20px 2%;
 }
 .suggested-brinkey {
     background:#eee;
@@ -203,16 +223,20 @@ a {
 #selected-brinkeys {
     width:47%;
     float:left;
+    position:relative;
 }
 #selected-brinkeys-drop {
-    border: 4px dashed #009300;
+    border: 2px dashed #D7EBD3;
     padding:10px;
-    background:#eee;
-    min-height:200px;
+    min-height:467px;
 }
 #selected-brinkeys .suggested-brinkey{
     position:static !important;
     transition:  0.2s ease;
+}
+#selected-brinkeys .suggested-brinkey.ui-draggable-dragging .notinuseatm{
+    position:relative !important;
+    transition:  0s;
 }
 .suggested-brinkey.correct {
     border-color:#007500;
@@ -224,7 +248,7 @@ a {
 }
 #brinkey-placeholder {
     text-align:center;
-    margin-top:87px;
+    margin-top:207px;
 }
 #check-result, .back-btn {
     float:right;
@@ -238,14 +262,65 @@ a {
     cursor:pointer;
     margin-left:10px;
 }
-#check-result:hover {
+#check-result {
+    float:none;
+    margin:30px auto 0;
+    padding:10px 40px;
+    border-radius:4px;
+    display:block;
+}
+#check-result:hover, back-btn:hover {
     background:#007500;
 }
 #missing-gold-brinkeys {
     display:none;
 }
 
-
+#dissertation-reel {
+    background:#D7EBD3;
+}
+.drag-arrow {
+    margin: -20px auto -100px auto;
+    display:block;
+    width:80px;
+    height:auto;
+}
+.more-info {
+    background:#D7EBD3;
+}
+.more-info p{
+    margin:0;
+}
+.more-info a{
+    color:inherit;
+}
+.bottom-logos {
+    background: #f0f0f0;
+    padding:10px 2%;
+}
+#dissertation-overview {
+    background:#D7EBD3;
+}
+.overview-wrapper {
+    max-width:1200px;
+    width:90%;
+    margin:0px auto;
+    padding:20px 2%;
+}
+.overview-wrapper img{
+    float:left;
+    width:20%;
+    margin-right:40px;
+}
+.drag-arrow-right {
+    position:absolute;
+    top:200px;
+    left:-55px;
+    width:180px;
+}
+#cover-image img {
+    border:4px solid #ffffff;
+}
 
 /* ==========================================================================
    Helper classes

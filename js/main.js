@@ -20,6 +20,7 @@ $("#drop").droppable({ accept: ".dissertation",
         // place title and abstract
         $('span#title').html(dropped.find('h3').html());
         $('span#abstract').html(dropped.find('.abstract').html());
+        $('span#cover-image').html(dropped.find('img'));
          
         $('#darkness').fadeIn();
         $('#loading').fadeIn();
@@ -46,6 +47,9 @@ function makeBrinkeysDroppable(){
                 $('#brinkey-placeholder').hide();
             }
         }
+    });
+    $("#suggested-brinkey-container").droppable({ 
+        accept: ".suggested-brinkey"
     });
 }
 
@@ -77,7 +81,8 @@ $('#check-result').click(function(){
     else if(correctRatio == 1){
         message = "Alles goed, geweldig!";
     }
-    message += "<Br/><br/>De juiste keywords zijn hieronder groen gekleurd.";
+    message = "De keywords zijn opgeslagen in het systeem!"
+    message += "<Br/><br/>Hieronder is aangegeven met groen en rood welke keywords door een andere catalogiseerder zijn toegekend.";
     
     
     // deal with gold brinkeys that weren't suggested
@@ -89,7 +94,7 @@ $('#check-result').click(function(){
     
     
     if(missingBrinkeyFound){
-        message += "<Br/><br/>Er zijn ook nog keywords die niet in de gesuggereerde lijst zitten, maar wel door de KB zijn toegekend, die staan rechts onder.";
+        message += "<Br/><br/>Er zijn ook nog keywords die niet in de gesuggereerde lijst zitten, maar wel door de KB zijn toegekend, die staan rechts onderaan.";
         $('#missing-gold-brinkeys').fadeIn();
     }
     
@@ -105,5 +110,6 @@ $('.back-btn').click(function(){
         location.reload();
     });
 });
+
 
 

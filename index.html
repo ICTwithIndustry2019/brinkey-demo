@@ -22,17 +22,18 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
     <![endif]-->
 
-    <div class="wrapper">
-        <div id="home">
-            <h1>Brinkeys-generator</h1>
-            <img src="img/brinkeys-logo.jpg" alt="Brinkeys Logo" title="Brinkeys" />
-            <p>Brinkeys is een porte-manteau van Brinkmanonderwerpen and Keywords. Brinkmanonderwerpen zijn het systeem dat de <a href="https://www.kb.nl/" target="_blank">Koninklijke Bilbiotheek</a>(KB) gebruikt om al hun teksten te categoriseren. In de <a href="https://ict-research.nl/ict-with-industry/ictwi2019/" target="_blank">ICT with Industry workshop</a> hebben we een systeem gebouwd dat automatisch brinkmanonderpen kan suggereren voor wetenschappelijke dissertaties. We hebben verschillende methoden <a href="report.pdf" target="_blank">geëvalueerd</a> en gekozen voor een systeem gebaseerd op <a href="https://fasttext.cc/" target="_blank">FastText</a>. Dit systeem zou in de toekomst gebruikt kunnen worden door werknemers van de KB om sneller en nauwkeuriger deze onderwerpen toe te kennen tijdens de metadata generatie. Probeer het hieronder zelf uit!</p>
+    <div id="home">
+        <div class="wrapper">
+            <!--h1>Brinkeys-generator</h1-->
+            <img src="img/brinkeys-logo.jpg" alt="Brinkeys Logo" title="Brinkeys" class="logo" />
+            <p>Brinkeys is een porte-manteau van Brinkmanonderwerpen and Keywords. Brinkmanonderwerpen zijn het systeem dat de <a href="https://www.kb.nl/" target="_blank">Koninklijke Bilbiotheek</a> (KB) gebruikt om al hun teksten te categoriseren.</p>
+            <p>In de <a href="https://ict-research.nl/ict-with-industry/ictwi2019/" target="_blank">ICT with Industry workshop</a> hebben we een systeem gebouwd dat automatisch brinkmanonderpen kan suggereren voor wetenschappelijke dissertaties. We hebben verschillende methoden <a href="report.pdf" target="_blank">geëvalueerd</a> en gekozen voor een systeem gebaseerd op <a href="https://fasttext.cc/" target="_blank">FastText</a>.</p>
+            <p>Dit systeem zou in de toekomst gebruikt kunnen worden door werknemers van de KB om sneller en nauwkeuriger deze onderwerpen toe te kennen tijdens de metadata generatie.</p>
+            <p><strong>Probeer het hieronder zelf uit!</strong></p>
             
-            <div id="drop" class="clearfix">
-                <h4 class="placeholder">Sleep dissertatie hier naar toe om te analyseren</h4>
-                <div class="clear"></div>
-            </div>
             
+        </div>
+        <div id="dissertation-reel">    
             <div id="dissertations" class="clearfix">
                 <div class="dissertation" id="hovens" data-gold-brinkeys="trauma's (psychologie);depressiviteit;angsten" data-suggested-brinkeys="depressiviteit;autisme;trauma's (psychologie);ontwikkelingspsychologie;manisch-depressieve stoornis;kindergeneeskunde;psychosen;neurofysiologie;verslaafden;psychopathologie;orthodontie;whiplash;verslaving;psychosociale hulp;geneesmiddelengebruik;gedrag;Noord-Nederland">
                     <img src="img/emotional.jpg" alt="Omslag Sorensen" title="Sorensen" />
@@ -82,35 +83,65 @@
                     </p>
                     <p><a href="https://openaccess.leidenuniv.nl/handle/1887/12554" target="_blank">Meer informatie</a></p>
                 </div>
+                <div class="dissertation" id="sorensen" data-gold-brinkeys="chirurgie;gynaecologie" data-suggested-brinkeys="chirurgie;personeelsbeleid;gezondheidszorg;maagziekten;medisch onderwijs;functietheorie;plastische chirurgie;bedrijfsorganisatie;e-learning;breuken (geneeskunde);leerprocessen;geneeskunde;CAD/CAM;spierstelsel;medische instrumenten en apparaten;endoscopie;energiebesparing;medische statistiek;logistiek;internationale organisaties">
+                    <img src="img/laparoscopic.jpg" alt="Omslag Laparoscopic surgery in gynecology: studies about implementation and training" title="Laparoscopic surgery in gynecology: studies about implementation and training" />
+                    <h3>Laparoscopic surgery in gynecology: studies about implementation and training</h3>
+                    <h4>Kolkman, Wendela</h4>
+                    <p class="abstract">The development of gynecological laparoscopy in The Netherlands is slow. Laparoscopic training needs more emphasis during residency training. The laparoscopic simulator needs to be officially implemented into residency curriculum guidelines and incorporated into practice. Simulator training should be structured and mandatory, as a training tool, as well as a skills assessment tool. In order for residents to obtain a sufficient and uniform level of skills, their surgical skills need to be measured individually and objectively by means of the simulator. In addition, experts’ level on the simulator can be set as performance standards for residents and should be reached by residents before performing live laparoscopic surgery. Assisting during laparoscopic hysterectomy should be added to the requirements for graduation in the curriculum guidelines. To accomplish these recommendations, skilled laparoscopic gynecologists are required in every teaching hospital. Besides the beneficial aspects for residency training, a skilled laparoscopic gynecologist is needed to establish an internal referral system for procedures such as laparoscopic hysterectomy. For the other advanced laparoscopic procedures a regional or national referral system can be created.</p>
+                    <p><a href="https://openaccess.leidenuniv.nl/handle/1887/4980" target="_blank">Meer informatie</a></p>
+                </div>
                 
                 <div style="clear:both;"></div>
-                <hr />
-                
-                <p>Voor meer informatie, zie <a href="report.pdf">dit rapport</a>, of email voor vragen naar <a href="mailto:a.brandsen@arch.leidenuniv.nl">Alex Brandsen</a> </p>
-                
             </div>
-            
+        </div>
+        <div class="wrapper">
+            <img src="img/arrow-down.png" alt="arrow down" class="drag-arrow" />
+            <div id="drop" class="clearfix">
+                <h4 class="placeholder">Sleep dissertatie hier naar toe voor analyse</h4>
+                <div class="clear"></div>
+            </div>
+        
         </div>
         
-        <div id="select-brinkeys" class="clearfix">
-            <button class="back-btn">&lt; Terug</button>
+        <div class="wrapper more-info">
+            <p>Voor meer informatie, zie <a href="report.pdf">dit rapport</a>, of email voor vragen naar <a href="mailto:a.brandsen@arch.leidenuniv.nl">Alex Brandsen</a> </p>
+        </div>
+        <div class="wrapper bottom-logos">
+            <img src="img/logos.jpg" alt="logos"  />
+        </div>
+        
+    </div>
+    
+    <div id="select-brinkeys" class="clearfix">
+        <div class="wrapper">
+            <img src="img/brinkeys-logo.jpg" alt="Brinkeys Logo" title="Brinkeys" class="logo" />
+            <button class="back-btn"><img src="img/back-arrow.png" style="width:13px" /> Terug naar begin</button>
             <h2>Selecteer Brinkeys</h2>
-            <p>Hieronder zie je de keywords die zijn gegenereerd door het Brinkey systeem. Op basis van de titel en samenvatting van deze dissertatie, kies nu de keywords die er het beste bij passen. Sleep keywords van links naar rechts om ze toe te voegen. Als je op "Check resultaat" klikt worden je keywords vergeleken met die daadwerkelijk door de KB zijn toegekent. Denk er aan dat er maximaal 3 keywords per dissertatie worden toegekend door de KB.</p>
-            <hr/>
-            <p><strong>Dissertatie titel:</strong> <span id="title"></span></p>
-            <p><strong>Dissertatie samenvatting:</strong> <span id="abstract"></span></p>
-            <hr/>
+            <p>Hieronder zie je de keywords die zijn gegenereerd door het Brinkey systeem.</p>
+            <p><strong>Lees de titel en samenvatting van deze dissertatie, en kies de keywords die er het beste bij passen. </strong></p>
+            Sleep keywords van links naar rechts om ze toe te voegen. Als je op "Check resultaat" klikt worden je keywords vergeleken met die daadwerkelijk door de KB zijn toegekent (maximaal 3).</p>
+            <p>Dit systeem zou in de toekomst gebruikt kunnen worden door werknemers van de KB om sneller en nauwkeuriger onderwerpen toe te kennen tijdens de metadata generatie.</p>
+        </div>
+        <div id="dissertation-overview"> 
+            <div class="overview-wrapper clearfix"> 
+                <span id="cover-image"></span> 
+                <p style="margin-top:0;"><strong><span id="title"></span></strong></p>
+                <p><span id="abstract"></span></p>
+            </div>
+        </div>
+        <div class="wrapper">  
+            <br/>
             <div class="container clearfix">
                 <div id="suggested-brinkeys">
-                    <h3>Gegenereerde keywords</h3>
                     <div id="suggested-brinkey-container"></div>
                     <p><!-- empty element to stop container collapse --></p>
                 </div>
                 <div id="selected-brinkeys">
-                    <h3>Geselecteerde keywords</h3>
+                    
                     <div id="selected-brinkeys-drop">
-                        <p id="brinkey-placeholder">Sleep Brinkeys hier naar toe</p>
+                        <p id="brinkey-placeholder">Sleep keywords<br/>hier naar toe</p>
                     </div>
+                    <img src="img/arrow-right.png" alt="arrow right" class="drag-arrow-right" />
                     <div id="missing-gold-brinkeys">
                         <h3>KB Keywords</h3>
                         <p>Hieronder staan de keywords die wel door de KB zijn toegekend, maar niet door ons algoritme zijn gevonden:</p>
@@ -118,17 +149,21 @@
                     </div>
                 </div>
             </div>
-            <button id="check-result">Check resultaat</button>
-            <button class="back-btn hidden">&lt; Terug</button>
+            <button id="check-result"><img src="img/check.png" style="width:13px" /> Check resultaat</button>
+            <button class="back-btn"><img src="img/back-arrow.png" style="width:13px" /> Terug naar begin</button>
             
             <div style="clear:both;"></div>
-            <hr />
-            
-            <p>Voor meer informatie, zie <a href="report.pdf">dit rapport</a>, of email voor vragen naar <a href="mailto:a.brandsen@arch.leidenuniv.nl">Alex Brandsen</a> </p>
         </div>
         
+        <div class="wrapper more-info">
+            <p>Voor meer informatie, zie <a href="report.pdf">dit rapport</a>, of email voor vragen naar <a href="mailto:a.brandsen@arch.leidenuniv.nl">Alex Brandsen</a> </p>
+        </div>
+        <div class="wrapper bottom-logos">
+            <img src="img/logos.jpg" alt="logos"  />
+        </div>
+        </div>
     </div>
-    
+        
     <p style="text-align:center;font-size:10px;">&copy; Alex Brandsen, 2019.</p>
 
     
@@ -148,6 +183,8 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    
+
 
   
 </body>
