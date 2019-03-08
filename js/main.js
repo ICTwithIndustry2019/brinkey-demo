@@ -113,6 +113,6 @@ $('.back-btn').click(function(){
 
 // dissertation tooltip
 $( function() {
-    $( document ).tooltip();
+    $( '.dissertation' ).tooltip();
 });
 
