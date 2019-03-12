@@ -31,7 +31,7 @@ $("#drop").droppable({ accept: ".dissertation",
                 $('#loading').fadeOut();
                 $('#select-brinkeys').fadeIn();
             });
-        }, 100);
+        }, 1500);
     }
 });
 
